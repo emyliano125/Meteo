@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mta.selab.contoler.Controler">
+   <children>
+      <ComboBox fx:id="combo_box_country" layoutX="51.0" layoutY="70.0" onMouseClicked="#afisare_tari" prefWidth="150.0" />
+      <ComboBox fx:id="combo_box_city" layoutX="362.0" layoutY="70.0" onMouseClicked="#afisare_orase" prefWidth="150.0" />
+      <Label fx:id="label_id" layoutX="51.0" layoutY="36.0" prefHeight="18.0" prefWidth="121.0" text="Country:" />
+      <Label fx:id="label_city" layoutX="362.0" layoutY="36.0" prefHeight="18.0" prefWidth="122.0" text="City:" />
+      <Label fx:id="info_location" layoutX="51.0" layoutY="136.0" prefHeight="26.0" prefWidth="150.0" text="Location" />
+      <Label fx:id="info_data" layoutX="51.0" layoutY="174.0" prefHeight="18.0" prefWidth="150.0" text="Day, Hour" />
+      <Label fx:id="info_sky" layoutX="51.0" layoutY="209.0" prefHeight="18.0" prefWidth="150.0" text="Sky" />
+      <Label fx:id="info_precipitation" layoutX="362.0" layoutY="218.0" prefHeight="18.0" prefWidth="163.0" text="Precipitation" />
+      <Label fx:id="info_humidity" layoutX="362.0" layoutY="256.0" prefHeight="18.0" prefWidth="163.0" text="Humidity" />
+      <Label fx:id="info_wind" layoutX="362.0" layoutY="288.0" prefHeight="18.0" prefWidth="163.0" text="Wind" />
+      <Button onMouseClicked="#search" fx:id="search_button" layoutX="418.0" layoutY="137.0" mnemonicParsing="false" text="Search" />
+   </children>
+</AnchorPane>
