@@ -42,7 +42,9 @@ public class Model {
 
     public StringProperty ID_cityProperty() {
         return ID_city;
+
     }
+
 
     public void setID_city(String ID_city) {
         this.ID_city.set(ID_city);

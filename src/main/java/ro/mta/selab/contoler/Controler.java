@@ -1,7 +1,8 @@
 package ro.mta.selab.contoler;
 
 
-
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -27,6 +28,8 @@ import org.json.simple.parser.JSONParser;
 import ro.mta.selab.model.Model;
 import org.json.simple.JSONObject;
 
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -36,7 +39,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
-
 
 
 public class Controler {
@@ -61,11 +63,22 @@ public class Controler {
     @FXML
     private Label info_sky;
     @FXML
-    private Label info_precipitation;
+    private Label info_doi;
+    @FXML
+    private Label info_pressure;
     @FXML
     private Label info_humidity;
     @FXML
     private Label info_wind;
+    @FXML
+    private Label info_time;
+    @FXML
+    private ImageView image;
+    @FXML
+    private Label info_grade;
+
+
+
 
     private void read_function() throws IOException {
 
@@ -120,7 +133,12 @@ public class Controler {
                 aux_country.add(options.get(i).getID_country());
             }
         }
+    if(combo_box_country.getValue() == null)
+    {
         combo_box_country.getItems().addAll(aux_country);
+    }
+
+
 
     }
 
@@ -139,6 +157,7 @@ public class Controler {
         combo_box_city.getItems().addAll(options2);
 
 
+
     }
 
 
@@ -147,19 +166,99 @@ public class Controler {
         url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + combo_box_city.getValue() + "," + combo_box_country.getValue() + ",&appid=e804d08047c940bce478d224e7c653be&lang=ro&units=metric");
         URLConnection conn = url.openConnection();
         BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-        String down = org.apache.commons.io.IOUtils.toString(reader);
+        String down = IOUtils.toString(reader);
 
         Object object = new JSONParser().parse(down);
         JSONObject skr = (JSONObject) object;
         String location = (String) skr.get("name");
         info_location.setText(location);
-        JSONArray msg = (JSONArray) skr.get("weather");
-        Iterator<String> iterator = msg.iterator();
-       // while (iterator.hasNext()) {
-
-       // }
 
 
+        JSONArray arr = (JSONArray) skr.get("weather");
+        for (int i = 0; i < arr.size(); i++) {
+            JSONObject obj = (JSONObject) arr.get(i);
+            String main_id = (String) obj.get("main");
+            info_sky.setText(main_id);
+            String icon = (String) obj.get("icon");
+            String url1="http://openweathermap.org/img/wn/"+icon+"@2x.png";
+            Image img = new Image(url1, true);
+            image.setImage(img);
+            image.setFitWidth(100);
+            image.setFitHeight(100);
+
+
+
+        }
+
+        JSONObject arr2 = (JSONObject) skr.get("main");
+        String pressure = arr2.get("pressure").toString();
+        info_pressure.setText("Pressure: " + pressure);
+        String humidity = arr2.get("humidity").toString();
+        info_humidity.setText("Humidity: " + humidity + "%");
+
+        JSONObject arr3 = (JSONObject) skr.get("wind");
+        String wind_speed = arr3.get("speed").toString();
+        info_wind.setText("Wind: " + wind_speed + " km/h");
+
+        String timeStamp = new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime());
+        String timeStamp2 = new SimpleDateFormat("HH:mm").format(Calendar.getInstance().getTime());
+        info_data.setText("Date: "+ timeStamp);
+        info_time.setText("Hour: "+ timeStamp2);
+
+        JSONObject arr4 = (JSONObject) skr.get("main");
+        String grade = arr4.get("temp").toString();
+        info_grade.setText(grade + " °C");
+
+
+
+    }
+
+    public void min(MouseEvent mouseEvent) throws IOException, ParseException {
+
+        URL url;
+        url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + combo_box_city.getValue() + "," + combo_box_country.getValue() + ",&appid=e804d08047c940bce478d224e7c653be&lang=ro&units=metric");
+        URLConnection conn = url.openConnection();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        String down = IOUtils.toString(reader);
+
+        Object object = new JSONParser().parse(down);
+        JSONObject skr = (JSONObject) object;
+
+        JSONObject min_max = (JSONObject) skr.get("main");
+        String grade = min_max.get("temp_min").toString();
+        info_grade.setText(grade + " °C");
+
+    }
+
+    public void max(MouseEvent mouseEvent) throws IOException, ParseException {
+        URL url;
+        url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + combo_box_city.getValue() + "," + combo_box_country.getValue() + ",&appid=e804d08047c940bce478d224e7c653be&lang=ro&units=metric");
+        URLConnection conn = url.openConnection();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        String down = IOUtils.toString(reader);
+
+        Object object = new JSONParser().parse(down);
+        JSONObject skr = (JSONObject) object;
+
+        JSONObject min_max = (JSONObject) skr.get("main");
+
+        String grade2 = min_max.get("temp_max").toString();
+        info_grade.setText(grade2 + " °C");
+    }
+
+    public void now(MouseEvent mouseEvent) throws IOException, ParseException {
+        URL url;
+        url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + combo_box_city.getValue() + "," + combo_box_country.getValue() + ",&appid=e804d08047c940bce478d224e7c653be&lang=ro&units=metric");
+        URLConnection conn = url.openConnection();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        String down = IOUtils.toString(reader);
+
+        Object object = new JSONParser().parse(down);
+        JSONObject skr = (JSONObject) object;
+
+        JSONObject now = (JSONObject) skr.get("main");
+        String grade = now.get("temp").toString();
+        info_grade.setText(grade + " °C");
     }
 }
 

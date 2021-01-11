@@ -31,6 +31,7 @@ public class Main extends Application {
         try {
             loader.setLocation(this.getClass().getResource("/view/View.fxml"));
             primaryStage.setScene(new Scene(loader.load()));
+            primaryStage.setTitle("EmiMeteo");
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();

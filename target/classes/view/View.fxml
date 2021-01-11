@@ -1,20 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mta.selab.contoler.Controler">
    <children>
-      <ComboBox fx:id="combo_box_country" layoutX="51.0" layoutY="70.0" onMouseClicked="#afisare_tari" prefWidth="150.0" />
-      <ComboBox fx:id="combo_box_city" layoutX="362.0" layoutY="70.0" onMouseClicked="#afisare_orase" prefWidth="150.0" />
-      <Label fx:id="label_id" layoutX="51.0" layoutY="36.0" prefHeight="18.0" prefWidth="121.0" text="Country:" />
-      <Label fx:id="label_city" layoutX="362.0" layoutY="36.0" prefHeight="18.0" prefWidth="122.0" text="City:" />
-      <Label fx:id="info_location" layoutX="51.0" layoutY="136.0" prefHeight="26.0" prefWidth="150.0" text="Location" />
-      <Label fx:id="info_data" layoutX="51.0" layoutY="174.0" prefHeight="18.0" prefWidth="150.0" text="Day, Hour" />
-      <Label fx:id="info_sky" layoutX="51.0" layoutY="209.0" prefHeight="18.0" prefWidth="150.0" text="Sky" />
-      <Label fx:id="info_precipitation" layoutX="362.0" layoutY="218.0" prefHeight="18.0" prefWidth="163.0" text="Precipitation" />
-      <Label fx:id="info_humidity" layoutX="362.0" layoutY="256.0" prefHeight="18.0" prefWidth="163.0" text="Humidity" />
-      <Label fx:id="info_wind" layoutX="362.0" layoutY="288.0" prefHeight="18.0" prefWidth="163.0" text="Wind" />
-      <Button onMouseClicked="#search" fx:id="search_button" layoutX="418.0" layoutY="137.0" mnemonicParsing="false" text="Search" />
+      <ComboBox fx:id="combo_box_country" layoutX="46.0" layoutY="110.0" onMouseClicked="#afisare_tari" prefWidth="150.0" />
+      <ComboBox fx:id="combo_box_city" layoutX="211.0" layoutY="110.0" onMouseClicked="#afisare_orase" prefWidth="150.0" />
+      <Label fx:id="label_id" layoutX="46.0" layoutY="73.0" prefHeight="18.0" prefWidth="121.0" text="Country:">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="label_city" layoutX="209.0" layoutY="73.0" prefHeight="18.0" prefWidth="122.0" text="City:">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="info_location" layoutX="11.0" layoutY="162.0" prefHeight="26.0" prefWidth="150.0">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font></Label>
+      <Label fx:id="info_data" layoutX="11.0" layoutY="191.0" prefHeight="18.0" prefWidth="150.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font></Label>
+      <Label fx:id="info_sky" layoutX="10.0" layoutY="227.0" prefHeight="18.0" prefWidth="72.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font></Label>
+      <Label fx:id="info_pressure" layoutX="423.0" layoutY="247.0" prefHeight="16.0" prefWidth="163.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font></Label>
+      <Label fx:id="info_humidity" layoutX="423.0" layoutY="265.0" prefHeight="16.0" prefWidth="163.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font></Label>
+      <Label fx:id="info_wind" layoutX="423.0" layoutY="285.0" prefHeight="4.0" prefWidth="163.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font></Label>
+      <Button fx:id="search_button" layoutX="381.0" layoutY="110.0" mnemonicParsing="false" onMouseClicked="#search" text="Search">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font></Button>
+      <Label fx:id="info_time" layoutX="10.0" layoutY="209.0" prefHeight="18.0" prefWidth="72.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font></Label>
+      <Label fx:id="info_grade" layoutX="114.0" layoutY="293.0" prefHeight="67.0" prefWidth="94.0">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="25.0" />
+         </font></Label>
+      <ImageView fx:id="image" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="min_button" layoutX="221.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#min" text="MIN">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="max_button" layoutX="325.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#max" text="MAX">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="now_button" layoutX="270.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#now" text="NOW">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
