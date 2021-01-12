@@ -3,15 +3,33 @@ package ro.mta.selab.model;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Model {
+/**
+ * Clasa aceasta reprezinta modelul MVC Arhitecture al acestei aplicatii.
+ * Aceasta clasa are rolul de a reprezenta o entitate din aplicație.
+ *
+ * @author Dumitru Emilian-Nicusor
+ */
 
-    StringProperty ID_country;  //##################### declararea variabilelor, in urma carora se vor face request-uri #####################
+
+
+
+public class Model {
+    /**
+     * Membrii acestei clase vor fi cei care vor primii valorile noastre de interes.
+     * Pentru afisarea informatiilor dorite, despre localitatea dorita, vor fi necesari
+     * acesti membrii.
+     * Cautarea se va face in functie de ei.
+     *
+     */
+
+
+    StringProperty ID_country;
     StringProperty City;
     StringProperty ID_city;
 
 
 
-    //##################### Implementarea metodelor set() si get() a variabilelor declarate mai sus #####################
+
 
     public String getID_country() {
         return ID_country.get();
@@ -51,8 +69,12 @@ public class Model {
         this.ID_city.set(ID_city);
     }
 
+    /**
+     * Crearea constructorului.
+     * Constructorul ne va fi util in crearea obiectelor de tip Model.
+     *
+     */
 
-    //##################### Implementarea constructorului obiectului de tip Model #####################
 
     public Model(String ID_country, String City, String ID_city) {
         this.ID_country = new SimpleStringProperty(ID_country);

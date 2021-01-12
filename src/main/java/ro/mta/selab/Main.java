@@ -27,8 +27,8 @@ public class Main extends Application {
         try {
             loader.setLocation(this.getClass().getResource("/view/View.fxml"));
             primaryStage.setScene(new Scene(loader.load()));
-            primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/photo/sun.png")));//##### setare iconita primara #####
-            primaryStage.setTitle("EmiMeteo");// ##### setare nume aplicatie #####
+            primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/photo/sun.png")));
+            primaryStage.setTitle("EmiMeteo");
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
