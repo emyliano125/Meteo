@@ -29,15 +29,15 @@
          <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
          </font></Label>
-      <Label fx:id="info_pressure" layoutX="423.0" layoutY="247.0" prefHeight="16.0" prefWidth="163.0" text="pressure">
+      <Label fx:id="info_pressure" layoutX="423.0" layoutY="247.0" prefHeight="16.0" prefWidth="163.0">
          <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
          </font></Label>
-      <Label fx:id="info_humidity" layoutX="423.0" layoutY="265.0" prefHeight="16.0" prefWidth="163.0" text="humidity">
+      <Label fx:id="info_humidity" layoutX="423.0" layoutY="265.0" prefHeight="16.0" prefWidth="163.0">
          <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
          </font></Label>
-      <Label fx:id="info_wind" layoutX="423.0" layoutY="285.0" prefHeight="4.0" prefWidth="163.0" text="wind">
+      <Label fx:id="info_wind" layoutX="423.0" layoutY="285.0" prefHeight="4.0" prefWidth="163.0">
          <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
          </font></Label>
