@@ -1,16 +1,17 @@
 package ro.mta.selab.model;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Model {
 
-    StringProperty ID_country;
+    StringProperty ID_country;  //##################### declararea variabilelor, in urma carora se vor face request-uri #####################
     StringProperty City;
     StringProperty ID_city;
 
+
+
+    //##################### Implementarea metodelor set() si get() a variabilelor declarate mai sus #####################
 
     public String getID_country() {
         return ID_country.get();
@@ -50,13 +51,14 @@ public class Model {
         this.ID_city.set(ID_city);
     }
 
+
+    //##################### Implementarea constructorului obiectului de tip Model #####################
+
     public Model(String ID_country, String City, String ID_city) {
         this.ID_country = new SimpleStringProperty(ID_country);
         this.City = new SimpleStringProperty(City);
         this.ID_city = new SimpleStringProperty(ID_city);
     }
-
-
 
 
 }

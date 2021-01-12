@@ -7,13 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import ro.mta.selab.contoler.Controler;
 import ro.mta.selab.model.Model;
 
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
 
 public class Main extends Application {
     private ObservableList<Model> modelData = FXCollections.observableArrayList();
@@ -31,8 +27,8 @@ public class Main extends Application {
         try {
             loader.setLocation(this.getClass().getResource("/view/View.fxml"));
             primaryStage.setScene(new Scene(loader.load()));
-            primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/sun.png")));
-            primaryStage.setTitle("EmiMeteo");
+            primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/sun.png")));//##### setare iconita primara #####
+            primaryStage.setTitle("EmiMeteo");// ##### setare nume aplicatie #####
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
