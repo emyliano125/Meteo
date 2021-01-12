@@ -1,44 +1,29 @@
 package ro.mta.selab.contoler;
 
 
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
-
-
-import com.sun.javafx.collections.MappingChange;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONException;
-import org.json.simple.parser.ParseException;
-import org.json.simple.parser.JSONParser;
-import ro.mta.selab.model.Model;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-import java.util.Calendar;
-import java.text.SimpleDateFormat;
-
-import java.util.Iterator;
-import java.util.Map;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import ro.mta.selab.model.Model;
 
 import java.io.*;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 
 public class Controler {
@@ -76,6 +61,10 @@ public class Controler {
     private ImageView image;
     @FXML
     private Label info_grade;
+    @FXML
+    private ImageView image_view2;
+    @FXML
+    private Label info_titulu;
 
 
 
@@ -109,8 +98,9 @@ public class Controler {
     private void initialize() throws IOException {
 
         read_function();
-
-
+        Image image = new Image(new FileInputStream("G:\\ANUL 4\\ingineria programarii\\Meteo\\src\\main\\resources\\day-and-night.png"));
+        image_view2.setImage(image);
+        info_titulu.setText("Emi\nMeteo");
     }
 
     @FXML
