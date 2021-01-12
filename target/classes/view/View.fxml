@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mta.selab.contoler.Controler">
+<AnchorPane fx:id="image_sky" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mta.selab.contoler.Controler">
    <children>
       <ComboBox fx:id="combo_box_country" layoutX="46.0" layoutY="110.0" onMouseClicked="#afisare_tari" prefWidth="150.0" />
       <ComboBox fx:id="combo_box_city" layoutX="211.0" layoutY="110.0" onMouseClicked="#afisare_orase" prefWidth="150.0" />
@@ -17,27 +17,27 @@
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="info_location" layoutX="11.0" layoutY="162.0" prefHeight="26.0" prefWidth="150.0">
+      <Label fx:id="info_location" layoutX="46.0" layoutY="164.0" prefHeight="26.0" prefWidth="150.0">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />
          </font></Label>
-      <Label fx:id="info_data" layoutX="11.0" layoutY="191.0" prefHeight="18.0" prefWidth="150.0">
+      <Label fx:id="info_data" layoutX="46.0" layoutY="191.0" prefHeight="18.0" prefWidth="150.0">
          <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
          </font></Label>
-      <Label fx:id="info_sky" layoutX="10.0" layoutY="227.0" prefHeight="18.0" prefWidth="72.0">
+      <Label fx:id="info_sky" layoutX="46.0" layoutY="227.0" prefHeight="18.0" prefWidth="72.0">
          <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
          </font></Label>
-      <Label fx:id="info_pressure" layoutX="423.0" layoutY="247.0" prefHeight="16.0" prefWidth="163.0">
+      <Label fx:id="info_pressure" layoutX="423.0" layoutY="247.0" prefHeight="16.0" prefWidth="163.0" text="pressure">
          <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
          </font></Label>
-      <Label fx:id="info_humidity" layoutX="423.0" layoutY="265.0" prefHeight="16.0" prefWidth="163.0">
+      <Label fx:id="info_humidity" layoutX="423.0" layoutY="265.0" prefHeight="16.0" prefWidth="163.0" text="humidity">
          <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
          </font></Label>
-      <Label fx:id="info_wind" layoutX="423.0" layoutY="285.0" prefHeight="4.0" prefWidth="163.0">
+      <Label fx:id="info_wind" layoutX="423.0" layoutY="285.0" prefHeight="4.0" prefWidth="163.0" text="wind">
          <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
          </font></Label>
@@ -45,15 +45,15 @@
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font></Button>
-      <Label fx:id="info_time" layoutX="10.0" layoutY="209.0" prefHeight="18.0" prefWidth="72.0">
+      <Label fx:id="info_time" layoutX="46.0" layoutY="209.0" prefHeight="18.0" prefWidth="72.0">
          <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
          </font></Label>
-      <Label fx:id="info_grade" layoutX="114.0" layoutY="293.0" prefHeight="67.0" prefWidth="94.0">
+      <Label fx:id="info_grade" layoutX="120.0" layoutY="310.0" prefHeight="67.0" prefWidth="94.0">
          <font>
             <Font name="Times New Roman Bold Italic" size="25.0" />
          </font></Label>
-      <ImageView fx:id="image" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image" fitHeight="67.0" fitWidth="81.0" layoutX="33.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="min_button" layoutX="221.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#min" text="MIN">
          <font>
             <Font name="Times New Roman Bold" size="14.0" />
@@ -75,5 +75,12 @@
             <Font name="Ravie" size="18.0" />
          </font>
       </Label>
+      <ImageView fx:id="image_ski" fitHeight="16.0" fitWidth="22.0" layoutX="22.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image_timp" fitHeight="16.0" fitWidth="22.0" layoutX="22.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image_data" fitHeight="16.0" fitWidth="22.0" layoutX="22.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image_localitate" fitHeight="16.0" fitWidth="22.0" layoutX="22.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image_pressure" fitHeight="16.0" fitWidth="22.0" layoutX="398.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image_humidity" fitHeight="16.0" fitWidth="22.0" layoutX="398.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image_wind" fitHeight="16.0" fitWidth="22.0" layoutX="398.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

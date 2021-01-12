@@ -61,7 +61,20 @@ public class Controler {
     private ImageView image_view2;
     @FXML
     private Label info_titulu;
-
+    @FXML
+    private ImageView image_localitate;
+    @FXML
+    private ImageView image_ski;
+    @FXML
+    private ImageView image_data;
+    @FXML
+    private ImageView image_timp;
+    @FXML
+    private ImageView image_pressure;
+    @FXML
+    private ImageView image_humidity;
+    @FXML
+    private ImageView image_wind;
 
 
     //##### Implementarea functiei care citeste datele din fisierul de input #####
@@ -95,7 +108,7 @@ public class Controler {
     private void initialize() throws IOException {
 
         read_function();//##### Apelul functiei de citire din fisierul de input #####
-        Image image = new Image(new FileInputStream("src/main/resources/day-and-night.png"));
+        Image image = new Image(new FileInputStream("src/main/resources/photo/day-and-night.png"));
         image_view2.setImage(image);
         info_titulu.setText("Emi\nMeteo");
     }
@@ -181,6 +194,27 @@ public class Controler {
             image.setImage(img);    //##### setare ImageView cu iconita potrivita #####
             image.setFitWidth(100);
             image.setFitHeight(100);
+
+
+
+            //##### Setare iconite pentru interfata grafica #####
+
+            Image image = new Image(new FileInputStream("src/main/resources/photo/buildings.png"));
+            image_localitate.setImage(image);
+            Image image1 = new Image(new FileInputStream("src/main/resources/photo/calendar(1).png"));
+            image_data.setImage(image1);
+            Image image2 = new Image(new FileInputStream("src/main/resources/photo/clock.png"));
+            image_timp.setImage(image2);
+            Image image3 = new Image(new FileInputStream("src/main/resources/photo/clouds-and-sun.png"));
+            image_ski.setImage(image3);
+
+            Image image4 = new Image(new FileInputStream("src/main/resources/photo/gauge.png"));
+            image_pressure.setImage(image4);
+            Image image5 = new Image(new FileInputStream("src/main/resources/photo/humidity.png"));
+            image_humidity.setImage(image5);
+            Image image6 = new Image(new FileInputStream("src/main/resources/photo/weather-vane.png"));
+            image_wind.setImage(image6);
+
 
 
 
