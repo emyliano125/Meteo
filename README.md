@@ -37,7 +37,7 @@ Alte functionalitati:
 
 ## Diagrama de clase
 
-![Incarcare nereusita](Meteo/MeteoDiagram.png "Diagrama clase")
+![Incarcare nereusita](MeteoDiagram.png "Diagrama clase")
  
 
 ## Proiectant
