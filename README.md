@@ -51,7 +51,7 @@ Alte functionalitati:
 
 ## Diagrama de activitati
 
-![Incarcare nereusita](MeteoDiagramActivitati.png "Diagrama activitati")
+![Incarcare nereusita](MeteoDiagramactiv.png "Diagrama activitati")
  
 
 ## Proiectant
