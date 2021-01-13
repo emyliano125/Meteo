@@ -8,8 +8,8 @@
  - [Prezentare](#prezentare)
  - [Utilizare](#utilizare)
  - [Proiectant](#proiectant)
- - [Diagrama de clase](#Diagrama de clase)
- - [Diagrama de activitati](#Diagrama de activitati)	
+ - [Diagrama de clase](#diagramaclase)
+ - [Diagrama de activitati](#diagramaactiv)	
 
 ## Prezentare
 Proiectul prezentat contine o aplicatie Java. Aceasta aplicatie este una informativa, datele furnizate fiind date meteorologice exacte. Fisierul de input contine informatii despre diferite localitati din toata lumea urmand ca aplicatia sa foloseasca aceste date pentru a face request-uri catre API-ul [OpenWeatherMap]("https://openweathermap.org/api").
@@ -24,7 +24,7 @@ Datele prezente in fisierul de input sunt:
  - Longitudine
  - Codul tarii
 
-Exemplu fisier de input:
+**_Exemplu fisier de input:_**
 
 819827	Razvilka	55.5917	37.7408	RU<br>
 524901	Moscow		55.7522	37.6156	RU<br>
