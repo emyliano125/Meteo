@@ -12,7 +12,7 @@ import ro.mta.selab.model.Model;
 import java.io.IOException;
 
 public class Main extends Application {
-    private ObservableList<Model> modelData = FXCollections.observableArrayList();
+
 
 
     public static void main(String[] args) throws IOException {

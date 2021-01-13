@@ -30,7 +30,7 @@ public class ModelTest {
 
         ArrayList<String> test = new ArrayList<String>();
 
-        File file = new File("G:/ANUL 4/ingineria programarii/Meteo/src/main/resources/input");
+        File file = new File("src/main/resources/input");
         if (file.exists()) {
 
             BufferedReader br = new BufferedReader(new FileReader(file));

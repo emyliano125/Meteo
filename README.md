@@ -34,6 +34,10 @@ Alte functionalitati:
  - Buton de afisare a temperaturii **_MAXIME_**
  - Buton de afisare a temperaturii **_NORMALE_**
 
+
+## Diagrama de clase
+
+![Incarcare nereusita](Meteo/MeteoDiagram.png "Diagrama clase")
  
 
 ## Proiectant
