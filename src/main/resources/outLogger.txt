@@ -1,0 +1,8 @@
+[Locatia: Slatina] [Data: 15/01/2021] [Hour: 01:04] [Temperature: -2.28] [Pressure: 1009] [Humidity: 86] [Wind: 3.6]
+
+[Locatia: Cluj-Napoca] [Data: 15/01/2021] [Hour: 01:04] [Temperature: -2.14] [Pressure: 1009] [Humidity: 80] [Wind: 5.66]
+
+[Locatia: Madrid] [Data: 15/01/2021] [Hour: 01:04] [Temperature: 0.1] [Pressure: 1027] [Humidity: 86] [Wind: 0.82]
+
+[Locatia: Barcelona] [Data: 15/01/2021] [Hour: 01:04] [Temperature: 6.01] [Pressure: 1021] [Humidity: 75] [Wind: 4.63]
+

@@ -24,6 +24,9 @@ import java.net.URLConnection;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 /**
  * Clasa Controler
@@ -124,7 +127,15 @@ public class Controler {
         Image image = new Image(new FileInputStream("src/main/resources/photo/day-and-night.png"));
         image_view2.setImage(image);
         info_titulu.setText("Emi\nMeteo");
+
     }
+
+
+
+
+
+
+
 
     /**
      * Metoda afisare_tari() are rolul de a umple ComboBoxul_country
@@ -193,6 +204,8 @@ public class Controler {
      * Tot aici se face si o parte din Parsarea fisierului JSON
      *
      */
+
+
 
     @FXML
     public void search(MouseEvent mouseEvent) throws IOException, JSONException, ParseException {
@@ -270,7 +283,14 @@ public class Controler {
 
 
 
+
+        FileWriter Logger = new FileWriter("src/main/resources/outLogger.txt",true);
+        Logger.write("[Locatia: " +location+"]"+" [Data: "+timeStamp+ "]"+ " [Hour: "+timeStamp2+"]"+ " [Temperature: "+grade+"]"+ " [Pressure: "+pressure+"]"+ " [Humidity: " +humidity+"]"+ " [Wind: "+wind_speed+"]\n");
+        Logger.write("\n");
+        Logger.close();
+
     }
+
 
     /**
      * Metodele min(), max(), normal() au rolul de a afisa temperatura
